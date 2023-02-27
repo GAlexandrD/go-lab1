@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -19,6 +20,7 @@ func getTime(w http.ResponseWriter, _ *http.Request) {
   }
 
 func main() {
+    fmt.Println("Hello, world.")
 	http.HandleFunc("/time", getTime);
     log.Fatal(http.ListenAndServe(":8795", nil))
 }
