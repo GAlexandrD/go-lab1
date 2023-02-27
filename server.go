@@ -8,7 +8,7 @@ import (
 )
 
 type TimeData struct {
-    Time string json:"time"
+    Time string `json:"time"`
 }
 
 func getTime(w http.ResponseWriter, _ *http.Request) {
